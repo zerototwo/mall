@@ -1,0 +1,680 @@
+卷 新加卷 的文件夹 PATH 列表
+卷序列号为 D8B2-EA6E
+E:.
+│  .gitignore
+│  mvnw
+│  mvnw.cmd
+│  pom.xml
+│  SpringbootSchoolShop.iml
+│  tree.txt
+│  
+├─.idea
+│  │  .gitignore
+│  │  compiler.xml
+│  │  encodings.xml
+│  │  jarRepositories.xml
+│  │  misc.xml
+│  │  SpringbootSchoolShop.iml
+│  │  workspace.xml
+│  │  
+│  ├─inspectionProfiles
+│  │      Project_Default.xml
+│  │      
+│  └─sonarlint
+│      ├─issuestore
+│      │  │  index.pb
+│      │  │  
+│      │  ├─4
+│      │  │  └─b
+│      │  │          4b42d21d4768a859de853461b925484a7b4fa254
+│      │  │          
+│      │  ├─7
+│      │  │  └─1
+│      │  │          71624d341912addff20716024292d6c6ccb9e9e4
+│      │  │          
+│      │  ├─8
+│      │  │  └─8
+│      │  │          8857acb14eec00f20f2f8b4138104d0a1f7e5e8f
+│      │  │          
+│      │  ├─a
+│      │  │  └─6
+│      │  │          a6d8b8556fee0e03112ce2bf34b8cb27a7dc9e58
+│      │  │          
+│      │  ├─e
+│      │  │  └─0
+│      │  │          e056d79f6278d17fbe7a26ae99730b2a089098cf
+│      │  │          
+│      │  └─f
+│      │      └─0
+│      │              f0de19a8530e0c061bb41bb9ec1c6adeaa2158ff
+│      │              
+│      └─securityhotspotstore
+│          │  index.pb
+│          │  
+│          ├─4
+│          │  └─b
+│          │          4b42d21d4768a859de853461b925484a7b4fa254
+│          │          
+│          ├─7
+│          │  └─1
+│          │          71624d341912addff20716024292d6c6ccb9e9e4
+│          │          
+│          ├─8
+│          │  └─8
+│          │          8857acb14eec00f20f2f8b4138104d0a1f7e5e8f
+│          │          
+│          ├─a
+│          │  └─6
+│          │          a6d8b8556fee0e03112ce2bf34b8cb27a7dc9e58
+│          │          
+│          ├─e
+│          │  └─0
+│          │          e056d79f6278d17fbe7a26ae99730b2a089098cf
+│          │          
+│          └─f
+│              └─0
+│                      f0de19a8530e0c061bb41bb9ec1c6adeaa2158ff
+│                      
+├─.mvn
+│  └─wrapper
+│          maven-wrapper.jar
+│          maven-wrapper.properties
+│          MavenWrapperDownloader.java
+│          
+├─src
+│  ├─main
+│  │  ├─java
+│  │  │  └─com
+│  │  │      └─zhang
+│  │  │          └─ssmschoolshop
+│  │  │              │  SpringbootSchoolShopApplication.java
+│  │  │              │  
+│  │  │              ├─annotinon
+│  │  │              │      ExportEntityMap.java
+│  │  │              │      MetricTime.java
+│  │  │              │      
+│  │  │              ├─config
+│  │  │              │      SwaggerConfig.java
+│  │  │              │      WebMvcConfig.java
+│  │  │              │      
+│  │  │              ├─controller
+│  │  │              │  ├─admin
+│  │  │              │  │      ActivityController.java
+│  │  │              │  │      AdminOrderController.java
+│  │  │              │  │      ExcelController.java
+│  │  │              │  │      GoodsController.java
+│  │  │              │  │      LoginController.java
+│  │  │              │  │      UserController.java
+│  │  │              │  │      
+│  │  │              │  └─front
+│  │  │              │          CartController.java
+│  │  │              │          CustomerController.java
+│  │  │              │          FrontGoodsController.java
+│  │  │              │          MainController.java
+│  │  │              │          OrderController.java
+│  │  │              │          VerificationCodeImgController.java
+│  │  │              │          
+│  │  │              ├─dao
+│  │  │              │      ActivityMapper.java
+│  │  │              │      AddressMapper.java
+│  │  │              │      AdminMapper.java
+│  │  │              │      CategoryMapper.java
+│  │  │              │      CommentMapper.java
+│  │  │              │      FavoriteMapper.java
+│  │  │              │      GoodsMapper.java
+│  │  │              │      ImagePathMapper.java
+│  │  │              │      OrderItemMapper.java
+│  │  │              │      OrderMapper.java
+│  │  │              │      ShopCartMapper.java
+│  │  │              │      UserMapper.java
+│  │  │              │      
+│  │  │              ├─entity
+│  │  │              │      Activity.java
+│  │  │              │      ActivityExample.java
+│  │  │              │      Address.java
+│  │  │              │      AddressExample.java
+│  │  │              │      Admin.java
+│  │  │              │      AdminExample.java
+│  │  │              │      Category.java
+│  │  │              │      CategoryExample.java
+│  │  │              │      Comment.java
+│  │  │              │      CommentExample.java
+│  │  │              │      EmailSend.java
+│  │  │              │      Favorite.java
+│  │  │              │      FavoriteExample.java
+│  │  │              │      FavoriteKey.java
+│  │  │              │      Goods.java
+│  │  │              │      GoodsExample.java
+│  │  │              │      GoodsPrice.java
+│  │  │              │      ImagePath.java
+│  │  │              │      ImagePathExample.java
+│  │  │              │      Order.java
+│  │  │              │      OrderExample.java
+│  │  │              │      OrderItem.java
+│  │  │              │      OrderItemExample.java
+│  │  │              │      ShopCart.java
+│  │  │              │      ShopCartExample.java
+│  │  │              │      ShopCartKey.java
+│  │  │              │      User.java
+│  │  │              │      UserExample.java
+│  │  │              │      
+│  │  │              ├─service
+│  │  │              │  │  ActivityService.java
+│  │  │              │  │  AddressService.java
+│  │  │              │  │  AdminService.java
+│  │  │              │  │  CateService.java
+│  │  │              │  │  CommentService.java
+│  │  │              │  │  EmailService.java
+│  │  │              │  │  GoodsService.java
+│  │  │              │  │  OrderService.java
+│  │  │              │  │  ShopCartService.java
+│  │  │              │  │  UserService.java
+│  │  │              │  │  
+│  │  │              │  └─impl
+│  │  │              │          ActivityServiceImpl.java
+│  │  │              │          AddressServiceImpl.java
+│  │  │              │          AdminServiceImpl.java
+│  │  │              │          CateServiceImpl.java
+│  │  │              │          CommentServiceImpl.java
+│  │  │              │          EmailServiceImpl.java
+│  │  │              │          GoodsServiceImpl.java
+│  │  │              │          OrderServiceImpl.java
+│  │  │              │          ShopCartServiceImpl.java
+│  │  │              │          UserServiceImpl.java
+│  │  │              │          
+│  │  │              └─util
+│  │  │                  │  ExcelUtils.java
+│  │  │                  │  ImageUtil.java
+│  │  │                  │  Md5Util.java
+│  │  │                  │  Msg.java
+│  │  │                  │  
+│  │  │                  └─verificate
+│  │  │                          Verificate.java
+│  │  │                          
+│  │  ├─resources
+│  │  │  │  application.yml
+│  │  │  │  banner.txt
+│  │  │  │  
+│  │  │  └─mapper
+│  │  │          ActivityMapper.xml
+│  │  │          AddressMapper.xml
+│  │  │          AdminMapper.xml
+│  │  │          CategoryMapper.xml
+│  │  │          CommentMapper.xml
+│  │  │          FavoriteMapper.xml
+│  │  │          GoodsMapper.xml
+│  │  │          ImagePathMapper.xml
+│  │  │          OrderItemMapper.xml
+│  │  │          OrderMapper.xml
+│  │  │          ShopCartMapper.xml
+│  │  │          UserMapper.xml
+│  │  │          
+│  │  └─webapp
+│  │      ├─css
+│  │      │  │  bootstrap.min.css
+│  │      │  │  chat.css
+│  │      │  │  chatrobot.css
+│  │      │  │  favorite.css
+│  │      │  │  font-awesome.min.css
+│  │      │  │  information.css
+│  │      │  │  infostyle.css
+│  │      │  │  login.css
+│  │      │  │  main.css
+│  │      │  │  order.css
+│  │      │  │  release.css
+│  │      │  │  shopcart.css
+│  │      │  │  shopdetail.css
+│  │      │  │  style.css
+│  │      │  │  sweetalert.css
+│  │      │  │  templatemo-style.css
+│  │      │  │  
+│  │      │  └─bootstrap
+│  │      │      ├─css
+│  │      │      │      bootstrap-theme.css
+│  │      │      │      bootstrap-theme.css.map
+│  │      │      │      bootstrap-theme.min.css
+│  │      │      │      bootstrap-theme.min.css.map
+│  │      │      │      bootstrap.css
+│  │      │      │      bootstrap.css.map
+│  │      │      │      bootstrap.min.css
+│  │      │      │      bootstrap.min.css.map
+│  │      │      │      
+│  │      │      ├─fonts
+│  │      │      │      glyphicons-halflings-regular.eot
+│  │      │      │      glyphicons-halflings-regular.svg
+│  │      │      │      glyphicons-halflings-regular.ttf
+│  │      │      │      glyphicons-halflings-regular.woff
+│  │      │      │      glyphicons-halflings-regular.woff2
+│  │      │      │      
+│  │      │      └─js
+│  │      │              bootstrap.js
+│  │      │              bootstrap.min.js
+│  │      │              npm.js
+│  │      │              
+│  │      ├─fonts
+│  │      │      fontawesome-webfont.eot
+│  │      │      fontawesome-webfont.svg
+│  │      │      fontawesome-webfont.ttf
+│  │      │      fontawesome-webfont.woff
+│  │      │      fontawesome-webfont.woff2
+│  │      │      FontAwesome.otf
+│  │      │      
+│  │      ├─image
+│  │      │  │  3.jpg
+│  │      │  │  4.jpg
+│  │      │  │  5.jpg
+│  │      │  │  6.jpg
+│  │      │  │  checkbox-radio-sheet.png
+│  │      │  │  darkbg.png
+│  │      │  │  head.jpg
+│  │      │  │  img01.png
+│  │      │  │  img02.png
+│  │      │  │  img03.png
+│  │      │  │  img04.png
+│  │      │  │  img05.png
+│  │      │  │  login.png
+│  │      │  │  login0.png
+│  │      │  │  login1.png
+│  │      │  │  register.png
+│  │      │  │  register0.png
+│  │      │  │  register1.png
+│  │      │  │  tao.jpg
+│  │      │  │  whitebg.png
+│  │      │  │  
+│  │      │  ├─bu
+│  │      │  │      3.jpg
+│  │      │  │      5.jpg
+│  │      │  │      6.jpg
+│  │      │  │      
+│  │      │  └─img
+│  │      │          cancel-off.png
+│  │      │          cancel-on.png
+│  │      │          star-half.png
+│  │      │          star-off.png
+│  │      │          star-on.png
+│  │      │          
+│  │      ├─js
+│  │      │      address.js
+│  │      │      adminchat.js
+│  │      │      bootstrap-filestyle.min.js
+│  │      │      categery.js
+│  │      │      detail.js
+│  │      │      distpicker.js
+│  │      │      goodsManage.js
+│  │      │      holder.js
+│  │      │      information.js
+│  │      │      jquery-1.11.2.min.js
+│  │      │      jquery-migrate-1.2.1.min.js
+│  │      │      jquery.form.min.js
+│  │      │      jquery.js
+│  │      │      jquery.raty.js
+│  │      │      jquery.validate.min.js
+│  │      │      list.js
+│  │      │      login.js
+│  │      │      mqttws31.js
+│  │      │      order.js
+│  │      │      send.js
+│  │      │      shopcart.js
+│  │      │      sort.js
+│  │      │      sweetalert.min.js
+│  │      │      templatemo-script.js
+│  │      │      userManage.js
+│  │      │      validate.js
+│  │      │      
+│  │      └─WEB-INF
+│  │          └─views
+│  │                  activity.jsp
+│  │                  addActivity.jsp
+│  │                  addCategory.jsp
+│  │                  addGoods.jsp
+│  │                  address.jsp
+│  │                  admin.jsp
+│  │                  adminAllGoods.jsp
+│  │                  adminAllOrder.jsp
+│  │                  adminLogin.jsp
+│  │                  adminOrderComplete.jsp
+│  │                  adminOrderNav.jsp
+│  │                  adminOrderReceive.jsp
+│  │                  category.jsp
+│  │                  chatrobot.jsp
+│  │                  detail.jsp
+│  │                  favorite.jsp
+│  │                  goodsNav.jsp
+│  │                  header.jsp
+│  │                  information.jsp
+│  │                  list.jsp
+│  │                  login.jsp
+│  │                  main.jsp
+│  │                  orderConfirm.jsp
+│  │                  register.jsp
+│  │                  search.jsp
+│  │                  shopcart.jsp
+│  │                  sidebar.jsp
+│  │                  userManage.jsp
+│  │                  verificationcodeimg.jsp
+│  │                  
+│  └─test
+│      └─java
+│          └─com
+│              └─zhang
+│                  └─ssmschoolshop
+│                          SpringbootSchoolShopApplicationApplicationTests.java
+│                          
+└─target
+    ├─classes
+    │  │  application.yml
+    │  │  banner.txt
+    │  │  
+    │  ├─com
+    │  │  └─zhang
+    │  │      └─ssmschoolshop
+    │  │          │  SpringbootSchoolShopApplication$1.class
+    │  │          │  SpringbootSchoolShopApplication.class
+    │  │          │  
+    │  │          ├─annotinon
+    │  │          │      ExportEntityMap.class
+    │  │          │      MetricTime.class
+    │  │          │      
+    │  │          ├─config
+    │  │          │      SwaggerConfig.class
+    │  │          │      WebMvcConfig.class
+    │  │          │      
+    │  │          ├─controller
+    │  │          │  ├─admin
+    │  │          │  │      ActivityController.class
+    │  │          │  │      AdminOrderController.class
+    │  │          │  │      ExcelController.class
+    │  │          │  │      GoodsController.class
+    │  │          │  │      LoginController.class
+    │  │          │  │      UserController.class
+    │  │          │  │      
+    │  │          │  └─front
+    │  │          │          CartController.class
+    │  │          │          CustomerController.class
+    │  │          │          FrontGoodsController.class
+    │  │          │          MainController.class
+    │  │          │          OrderController.class
+    │  │          │          VerificationCodeImgController.class
+    │  │          │          
+    │  │          ├─dao
+    │  │          │      ActivityMapper.class
+    │  │          │      AddressMapper.class
+    │  │          │      AdminMapper.class
+    │  │          │      CategoryMapper.class
+    │  │          │      CommentMapper.class
+    │  │          │      FavoriteMapper.class
+    │  │          │      GoodsMapper.class
+    │  │          │      ImagePathMapper.class
+    │  │          │      OrderItemMapper.class
+    │  │          │      OrderMapper.class
+    │  │          │      ShopCartMapper.class
+    │  │          │      UserMapper.class
+    │  │          │      
+    │  │          ├─entity
+    │  │          │      Activity.class
+    │  │          │      ActivityExample$Criteria.class
+    │  │          │      ActivityExample$Criterion.class
+    │  │          │      ActivityExample$GeneratedCriteria.class
+    │  │          │      ActivityExample.class
+    │  │          │      Address.class
+    │  │          │      AddressExample$Criteria.class
+    │  │          │      AddressExample$Criterion.class
+    │  │          │      AddressExample$GeneratedCriteria.class
+    │  │          │      AddressExample.class
+    │  │          │      Admin.class
+    │  │          │      AdminExample$Criteria.class
+    │  │          │      AdminExample$Criterion.class
+    │  │          │      AdminExample$GeneratedCriteria.class
+    │  │          │      AdminExample.class
+    │  │          │      Category.class
+    │  │          │      CategoryExample$Criteria.class
+    │  │          │      CategoryExample$Criterion.class
+    │  │          │      CategoryExample$GeneratedCriteria.class
+    │  │          │      CategoryExample.class
+    │  │          │      Comment.class
+    │  │          │      CommentExample$Criteria.class
+    │  │          │      CommentExample$Criterion.class
+    │  │          │      CommentExample$GeneratedCriteria.class
+    │  │          │      CommentExample.class
+    │  │          │      EmailSend.class
+    │  │          │      Favorite.class
+    │  │          │      FavoriteExample$Criteria.class
+    │  │          │      FavoriteExample$Criterion.class
+    │  │          │      FavoriteExample$GeneratedCriteria.class
+    │  │          │      FavoriteExample.class
+    │  │          │      FavoriteKey.class
+    │  │          │      Goods.class
+    │  │          │      GoodsExample$Criteria.class
+    │  │          │      GoodsExample$Criterion.class
+    │  │          │      GoodsExample$GeneratedCriteria.class
+    │  │          │      GoodsExample.class
+    │  │          │      GoodsPrice.class
+    │  │          │      ImagePath.class
+    │  │          │      ImagePathExample$Criteria.class
+    │  │          │      ImagePathExample$Criterion.class
+    │  │          │      ImagePathExample$GeneratedCriteria.class
+    │  │          │      ImagePathExample.class
+    │  │          │      Order.class
+    │  │          │      OrderExample$Criteria.class
+    │  │          │      OrderExample$Criterion.class
+    │  │          │      OrderExample$GeneratedCriteria.class
+    │  │          │      OrderExample.class
+    │  │          │      OrderItem.class
+    │  │          │      OrderItemExample$Criteria.class
+    │  │          │      OrderItemExample$Criterion.class
+    │  │          │      OrderItemExample$GeneratedCriteria.class
+    │  │          │      OrderItemExample.class
+    │  │          │      ShopCart.class
+    │  │          │      ShopCartExample$Criteria.class
+    │  │          │      ShopCartExample$Criterion.class
+    │  │          │      ShopCartExample$GeneratedCriteria.class
+    │  │          │      ShopCartExample.class
+    │  │          │      ShopCartKey.class
+    │  │          │      User.class
+    │  │          │      UserExample$Criteria.class
+    │  │          │      UserExample$Criterion.class
+    │  │          │      UserExample$GeneratedCriteria.class
+    │  │          │      UserExample.class
+    │  │          │      
+    │  │          ├─service
+    │  │          │  │  ActivityService.class
+    │  │          │  │  AddressService.class
+    │  │          │  │  AdminService.class
+    │  │          │  │  CateService.class
+    │  │          │  │  CommentService.class
+    │  │          │  │  EmailService.class
+    │  │          │  │  GoodsService.class
+    │  │          │  │  OrderService.class
+    │  │          │  │  ShopCartService.class
+    │  │          │  │  UserService.class
+    │  │          │  │  
+    │  │          │  └─impl
+    │  │          │          ActivityServiceImpl.class
+    │  │          │          AddressServiceImpl.class
+    │  │          │          AdminServiceImpl.class
+    │  │          │          CateServiceImpl.class
+    │  │          │          CommentServiceImpl.class
+    │  │          │          EmailServiceImpl.class
+    │  │          │          GoodsServiceImpl.class
+    │  │          │          OrderServiceImpl.class
+    │  │          │          ShopCartServiceImpl.class
+    │  │          │          UserServiceImpl.class
+    │  │          │          
+    │  │          └─util
+    │  │              │  ExcelUtils.class
+    │  │              │  ImageUtil.class
+    │  │              │  Md5Util.class
+    │  │              │  Msg.class
+    │  │              │  
+    │  │              └─verificate
+    │  │                      Verificate.class
+    │  │                      
+    │  ├─mapper
+    │  │      ActivityMapper.xml
+    │  │      AddressMapper.xml
+    │  │      AdminMapper.xml
+    │  │      CategoryMapper.xml
+    │  │      CommentMapper.xml
+    │  │      FavoriteMapper.xml
+    │  │      GoodsMapper.xml
+    │  │      ImagePathMapper.xml
+    │  │      OrderItemMapper.xml
+    │  │      OrderMapper.xml
+    │  │      ShopCartMapper.xml
+    │  │      UserMapper.xml
+    │  │      
+    │  └─META-INF
+    │      └─resources
+    │          ├─css
+    │          │  │  bootstrap.min.css
+    │          │  │  chat.css
+    │          │  │  chatrobot.css
+    │          │  │  favorite.css
+    │          │  │  font-awesome.min.css
+    │          │  │  information.css
+    │          │  │  infostyle.css
+    │          │  │  login.css
+    │          │  │  main.css
+    │          │  │  order.css
+    │          │  │  release.css
+    │          │  │  shopcart.css
+    │          │  │  shopdetail.css
+    │          │  │  style.css
+    │          │  │  sweetalert.css
+    │          │  │  templatemo-style.css
+    │          │  │  
+    │          │  └─bootstrap
+    │          │      ├─css
+    │          │      │      bootstrap-theme.css
+    │          │      │      bootstrap-theme.css.map
+    │          │      │      bootstrap-theme.min.css
+    │          │      │      bootstrap-theme.min.css.map
+    │          │      │      bootstrap.css
+    │          │      │      bootstrap.css.map
+    │          │      │      bootstrap.min.css
+    │          │      │      bootstrap.min.css.map
+    │          │      │      
+    │          │      ├─fonts
+    │          │      │      glyphicons-halflings-regular.eot
+    │          │      │      glyphicons-halflings-regular.svg
+    │          │      │      glyphicons-halflings-regular.ttf
+    │          │      │      glyphicons-halflings-regular.woff
+    │          │      │      glyphicons-halflings-regular.woff2
+    │          │      │      
+    │          │      └─js
+    │          │              bootstrap.js
+    │          │              bootstrap.min.js
+    │          │              npm.js
+    │          │              
+    │          ├─fonts
+    │          │      fontawesome-webfont.eot
+    │          │      fontawesome-webfont.svg
+    │          │      fontawesome-webfont.ttf
+    │          │      fontawesome-webfont.woff
+    │          │      fontawesome-webfont.woff2
+    │          │      FontAwesome.otf
+    │          │      
+    │          ├─image
+    │          │  │  3.jpg
+    │          │  │  4.jpg
+    │          │  │  5.jpg
+    │          │  │  6.jpg
+    │          │  │  checkbox-radio-sheet.png
+    │          │  │  darkbg.png
+    │          │  │  head.jpg
+    │          │  │  img01.png
+    │          │  │  img02.png
+    │          │  │  img03.png
+    │          │  │  img04.png
+    │          │  │  img05.png
+    │          │  │  login.png
+    │          │  │  login0.png
+    │          │  │  login1.png
+    │          │  │  register.png
+    │          │  │  register0.png
+    │          │  │  register1.png
+    │          │  │  tao.jpg
+    │          │  │  whitebg.png
+    │          │  │  
+    │          │  ├─bu
+    │          │  │      3.jpg
+    │          │  │      5.jpg
+    │          │  │      6.jpg
+    │          │  │      
+    │          │  └─img
+    │          │          cancel-off.png
+    │          │          cancel-on.png
+    │          │          star-half.png
+    │          │          star-off.png
+    │          │          star-on.png
+    │          │          
+    │          ├─js
+    │          │      address.js
+    │          │      adminchat.js
+    │          │      bootstrap-filestyle.min.js
+    │          │      categery.js
+    │          │      detail.js
+    │          │      distpicker.js
+    │          │      goodsManage.js
+    │          │      holder.js
+    │          │      information.js
+    │          │      jquery-1.11.2.min.js
+    │          │      jquery-migrate-1.2.1.min.js
+    │          │      jquery.form.min.js
+    │          │      jquery.js
+    │          │      jquery.raty.js
+    │          │      jquery.validate.min.js
+    │          │      list.js
+    │          │      login.js
+    │          │      mqttws31.js
+    │          │      order.js
+    │          │      send.js
+    │          │      shopcart.js
+    │          │      sort.js
+    │          │      sweetalert.min.js
+    │          │      templatemo-script.js
+    │          │      userManage.js
+    │          │      validate.js
+    │          │      
+    │          └─WEB-INF
+    │              └─views
+    │                      activity.jsp
+    │                      addActivity.jsp
+    │                      addCategory.jsp
+    │                      addGoods.jsp
+    │                      address.jsp
+    │                      admin.jsp
+    │                      adminAllGoods.jsp
+    │                      adminAllOrder.jsp
+    │                      adminLogin.jsp
+    │                      adminOrderComplete.jsp
+    │                      adminOrderNav.jsp
+    │                      adminOrderReceive.jsp
+    │                      category.jsp
+    │                      chatrobot.jsp
+    │                      detail.jsp
+    │                      favorite.jsp
+    │                      goodsNav.jsp
+    │                      header.jsp
+    │                      information.jsp
+    │                      list.jsp
+    │                      login.jsp
+    │                      main.jsp
+    │                      orderConfirm.jsp
+    │                      register.jsp
+    │                      search.jsp
+    │                      shopcart.jsp
+    │                      sidebar.jsp
+    │                      userManage.jsp
+    │                      verificationcodeimg.jsp
+    │                      
+    ├─generated-sources
+    │  └─annotations
+    ├─generated-test-sources
+    │  └─test-annotations
+    └─test-classes
+        └─com
+            └─zhang
+                └─ssmschoolshop
+                        SpringbootSchoolShopApplicationApplicationTests.class
+                        

@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
 
     var path = $("#path").text();
@@ -7,31 +6,30 @@ $(document).ready(function () {
 
     to_page(path, 1);
 
-
 });
 
-$(document).on("click",".templatemo-delete-btn",function () {
-    var goodsname = $(this).parents("tr").find("td:eq(1)").text();
-    var goodsid = $(this).parents("tr").find("td:eq(0)").text();
+$(document).on("click", ".templatemo-delete-btn", function () {
+    var username = $(this).parents("tr").find("td:eq(1)").text();
+    var userid = $(this).parents("tr").find("td:eq(0)").text();
     swal({
-            title: "确定删除" + goodsname + "吗？",
-            type: "warning",
-            showCancelButton: true,
-            cancelButtonText:"取消",
-            confirmButtonColor: "#DD6B55",
-            confirmButtonText: "确定删除！",
-            closeOnConfirm: false,
-        },
+        title: "Are you sure you want to delete " + username + "?",
+        type: "warning",
+        showCancelButton: true,
+        cancelButtonText: "Cancel",
+        confirmButtonColor: "#DD6B55",
+        confirmButtonText: "Delete!",
+        closeOnConfirm: false,
+    },
         function () {
-            /*swal("删除！", "你的虚拟文件已经被删除。", "success");*/
+            /*swal("Deleted!", "Your virtual file has been deleted.", "success");*/
             $.ajax({
-                url: "/shop/admin/user/delete/" + goodsid,
+                url: "/shop/admin/user/delete/" + userid,
                 type: "DELETE",
-                success:function (result) {
-                    swal(result.msg, "","success");
-                    to_page('/shop',currentPage);
+                success: function (result) {
+                    swal(result.msg, "", "success");
+                    to_page('/shop', currentPage);
                 },
-                error:function () {
+                error: function () {
                     /*to_page('/shop',currentPage);*/
                 }
             });
@@ -45,13 +43,13 @@ function to_page(path, page) {
         type: "get",
         success: function (result) {
 
-            //解析显示
+            // Parse and display
             build_user_table(path, result);
 
-            //页面信息
+            // Page info
             build_page_info(path, result);
 
-            //分页
+            // Pagination
             build_page_nav(path, result);
 
             currentPage = page;
@@ -59,16 +57,16 @@ function to_page(path, page) {
     });
 }
 
-function build_user_table(path,result) {
+function build_user_table(path, result) {
     $("#goodsinfo tbody").empty();
-    var goods = result.info.pageInfo.list;
-    $.each(goods, function (index,item) {
+    var users = result.info.pageInfo.list;
+    $.each(users, function (index, item) {
         var userid = $("<td></td>").append(item.userid);
         var username = $("<td></td>").append(item.username);
         var email = $("<td></td>").append(item.email);
         var telephone = $("<td></td>").append(item.telephone);
 
-        var deleteBtn = $("<button></button>").addClass("templatemo-delete-btn").append("删除");
+        var deleteBtn = $("<button></button>").addClass("templatemo-delete-btn").append("Delete");
 
         var deleteTd = $("<td></td>").append(deleteBtn);
 
@@ -81,33 +79,33 @@ function build_user_table(path,result) {
     })
 }
 
-function build_page_info(path,result) {
+function build_page_info(path, result) {
     $("#page-info-area").empty();
-    $("#page-info-area").append("当前第"+ result.info.pageInfo.pageNum +"页，总共"+ result.info.pageInfo.pages +"页，总共"+ result.info.pageInfo.total +"记录")
+    $("#page-info-area").append("Current page " + result.info.pageInfo.pageNum + ", Total " + result.info.pageInfo.pages + " pages, Total " + result.info.pageInfo.total + " records")
 }
 
-function build_page_nav(path,result) {
+function build_page_nav(path, result) {
     $("#page-div-nav ul").empty();
     var pageUl = $("<ul></ul>").addClass("pagination")
 
     var firstPage = $("<li></li>").append($("<a aria-label=\"Next\"></a>")
         .append($("<span aria-hidden=\"true\"></span>")
-            .append("首页")));
+            .append("First")));
 
     var prePage = $("<li></li>").append($("<a aria-label=\"Next\"></a>")
         .append($("<span aria-hidden=\"true\"><i class=\"fa fa-backward\"></i></span>")));
 
-    if(!result.info.pageInfo.hasPreviousPage) {
+    if (!result.info.pageInfo.hasPreviousPage) {
         prePage.addClass("li-none");
     } else {
         prePage.click(function () {
-            to_page('/shop',result.info.pageInfo.prePage);
+            to_page('/shop', result.info.pageInfo.prePage);
         });
     }
 
-    //跳转
+    // Jump to first page
     firstPage.click(function () {
-        to_page('/shop',1);
+        to_page('/shop', 1);
     });
 
     var nextPage = $("<li></li>").append($("<a aria-label=\"Next\"></a>")
@@ -115,30 +113,30 @@ function build_page_nav(path,result) {
 
     var lastPage = $("<li></li>").append($("<a aria-label=\"Next\"></a>")
         .append($("<span aria-hidden=\"true\"></span>")
-            .append("末页")));
+            .append("Last")));
 
-    if(!result.info.pageInfo.hasNextPage) {
+    if (!result.info.pageInfo.hasNextPage) {
         nextPage.addClass("li-none");
     } else {
         nextPage.click(function () {
-            to_page('/shop',result.info.pageInfo.nextPage);
+            to_page('/shop', result.info.pageInfo.nextPage);
         });
     }
 
     lastPage.click(function () {
-        to_page('/shop',result.info.pageInfo.lastPage);
+        to_page('/shop', result.info.pageInfo.lastPage);
     });
 
     pageUl.append(firstPage).append(prePage);
 
-    $.each(result.info.pageInfo.navigatepageNums,function (index,item) {
+    $.each(result.info.pageInfo.navigatepageNums, function (index, item) {
         var numLi = $("<li></li>").append($("<a></a>")
             .append($("<span aria-hidden=\"true\"></span>").append(item)));
-        if(result.info.pageInfo.pageNum === item) {
+        if (result.info.pageInfo.pageNum === item) {
             numLi.addClass("active");
         }
         numLi.click(function () {
-            to_page('/shop',item);
+            to_page('/shop', item);
         });
         pageUl.append(numLi);
     });

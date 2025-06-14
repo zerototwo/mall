@@ -54,89 +54,89 @@
                                     <div class="sort-channel">
                                         <ul class="sort-channel-list list-group">
                                             <li class="list-group-item"><a
-                                                    href="${pageContext.request.contextPath}/category?cate=数码">Digital</a>
+                                                    href="${pageContext.request.contextPath}/category?cate=Digital">Digital</a>
                                                 <div class="sort-detail">
                                                     <dl class="dl-hor">
                                                         <dt>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=手机">Mobile
+                                                                href="${pageContext.request.contextPath}/category?cate=Mobile">Mobile
                                                                 Phone</a>
                                                         </dt>
                                                         <dd>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=手机壳">Phone
+                                                                href="${pageContext.request.contextPath}/category?cate=Phone Case">Phone
                                                                 Case</a> <a
-                                                                href="${pageContext.request.contextPath}/category?cate=充电器">Charger</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Charger">Charger</a>
                                                             <a href="">Battery</a> <a
-                                                                href="${pageContext.request.contextPath}/category?cate=耳机">Earphone</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Earphone">Earphone</a>
                                                         </dd>
                                                     </dl>
                                                     <dl class="dl-hor">
                                                         <dt>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=相机">Camera</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Camera">Camera</a>
                                                         </dt>
                                                         <dd>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=镜头">Lens</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Lens">Lens</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=单反">DSLR</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=DSLR">DSLR</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=胶片">Film</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Film">Film</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=摄像">Video</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Video">Video</a>
                                                         </dd>
                                                     </dl>
                                                     <dl class="dl-hor">
                                                         <dt>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=电脑">Computer</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Computer">Computer</a>
                                                         </dt>
                                                         <dd>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=显示屏">Monitor</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Monitor">Monitor</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=显卡">Graphics
+                                                                href="${pageContext.request.contextPath}/category?cate=Graphics Card">Graphics
                                                                 Card</a> <a
-                                                                href="${pageContext.request.contextPath}/category?cate=硬盘">Hard
+                                                                href="${pageContext.request.contextPath}/category?cate=Hard Disk">Hard
                                                                 Disk</a> <a
-                                                                href="${pageContext.request.contextPath}/category?cate=内存条">RAM</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=RAM">RAM</a>
                                                         </dd>
                                                     </dl>
                                                     <dl class="dl-hor">
                                                         <dt>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=影音">Audio
+                                                                href="${pageContext.request.contextPath}/category?cate=Audio & Video">Audio
                                                                 & Video</a>
                                                         </dt>
                                                         <dd>
                                                             <a
                                                                 href="${pageContext.request.contextPath}/category?cate=MP3">MP3</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=音响">Speaker</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Speaker">Speaker</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=麦克风">Microphone</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Microphone">Microphone</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=收音机">Radio</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Radio">Radio</a>
                                                         </dd>
                                                     </dl>
                                                 </div>
                                             </li>
                                             <li class="list-group-item"><a
-                                                    href="${pageContext.request.contextPath}/category?cate=日用">Daily
+                                                    href="${pageContext.request.contextPath}/category?cate=Daily Use">Daily
                                                     Use</a>
                                                 <div class="sort-detail">
                                                     <dl class="dl-hor">
                                                         <dt>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=护肤">Skin
+                                                                href="${pageContext.request.contextPath}/category?cate=Skin Care">Skin
                                                                 Care</a>
                                                         </dt>
                                                         <dd>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=洗发水">Shampoo</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Shampoo">Shampoo</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=沐浴露">Body
+                                                                href="${pageContext.request.contextPath}/category?cate=Body Wash">Body
                                                                 Wash</a>
                                                             <a href="">Facial Cleanser</a> <a href="">Hand Soap</a>
                                                         </dd>
@@ -144,268 +144,268 @@
                                                     <dl class="dl-hor">
                                                         <dt>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=美妆">Beauty</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Beauty">Beauty</a>
                                                         </dt>
                                                         <dd>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=面膜">Facial
+                                                                href="${pageContext.request.contextPath}/category?cate=Facial Mask">Facial
                                                                 Mask</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=口红">Lipstick</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Lipstick">Lipstick</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=防嗮">Sunscreen</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Sunscreen">Sunscreen</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=香水">Perfume</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Perfume">Perfume</a>
                                                         </dd>
                                                     </dl>
                                                     <dl class="dl-hor">
                                                         <dt>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=家居">Home</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Home">Home</a>
                                                         </dt>
                                                         <dd>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=书架">Bookshelf</a><a
-                                                                href="${pageContext.request.contextPath}/category?cate=鞋柜">Shoe
+                                                                href="${pageContext.request.contextPath}/category?cate=Bookshelf">Bookshelf</a><a
+                                                                href="${pageContext.request.contextPath}/category?cate=Shoe Cabinet">Shoe
                                                                 Cabinet</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=衣架">Clothes
+                                                                href="${pageContext.request.contextPath}/category?cate=Clothes Hanger">Clothes
                                                                 Hanger</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=台灯">Desk
+                                                                href="${pageContext.request.contextPath}/category?cate=Desk Lamp">Desk
                                                                 Lamp</a>
                                                         </dd>
                                                     </dl>
                                                 </div>
                                             </li>
                                             <li class="list-group-item"><a
-                                                    href="${pageContext.request.contextPath}/category?cate=闲置书籍">Books</a>
+                                                    href="${pageContext.request.contextPath}/category?cate=Books">Books</a>
                                                 <div class="sort-detail">
                                                     <dl class="dl-hor">
                                                         <dt>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=英语">English</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=English">English</a>
                                                         </dt>
                                                         <dd>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=四六级">CET-4/6</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=CET-4/6">CET-4/6</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=充电器">Business
+                                                                href="${pageContext.request.contextPath}/category?cate=Business English">Business
                                                                 English</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=听力">Listening</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Listening">Listening</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=考研">Postgraduate
+                                                                href="${pageContext.request.contextPath}/category?cate=Postgraduate Entrance Exam">Postgraduate
                                                                 Entrance Exam</a>
                                                         </dd>
                                                     </dl>
                                                     <dl class="dl-hor">
                                                         <dt>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=考研">Postgraduate
+                                                                href="${pageContext.request.contextPath}/category?cate=Postgraduate Entrance Exam">Postgraduate
                                                                 Entrance Exam</a>
                                                         </dt>
                                                         <dd>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=计算机">Computer
+                                                                href="${pageContext.request.contextPath}/category?cate=Computer Science">Computer
                                                                 Science</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=自动化">Automation</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Automation">Automation</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=金融">Finance</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Finance">Finance</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=其他">Others</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Others">Others</a>
                                                         </dd>
                                                     </dl>
                                                     <dl class="dl-hor">
                                                         <dt>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=体育">Sports</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Sports">Sports</a>
                                                         </dt>
                                                         <dd>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=足球">Football</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Football">Football</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=乒乓球">Table
+                                                                href="${pageContext.request.contextPath}/category?cate=Table Tennis">Table
                                                                 Tennis</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=篮球">Basketball</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Basketball">Basketball</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=羽毛球">Badminton</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Badminton">Badminton</a>
                                                         </dd>
                                                     </dl>
                                                     <dl class="dl-hor">
                                                         <dt>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=经典">Classics</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Classics">Classics</a>
                                                         </dt>
                                                         <dd>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=历史">History</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=History">History</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=名人">Celebrities</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Celebrities">Celebrities</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=政治">Politics</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Politics">Politics</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=小说">Novel</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Novel">Novel</a>
                                                         </dd>
                                                     </dl>
                                                 </div>
                                             </li>
                                             <li class="list-group-item"><a
-                                                    href="${pageContext.request.contextPath}/category?cate=服饰">Clothing</a>
+                                                    href="${pageContext.request.contextPath}/category?cate=Clothing">Clothing</a>
                                                 <div class="sort-detail">
                                                     <dl class="dl-hor">
                                                         <dt>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=女装">Women's
+                                                                href="${pageContext.request.contextPath}/category?cate=Women's Wear">Women's
                                                                 Wear</a>
                                                         </dt>
                                                         <dd>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=连衣裙">Dress</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Dress">Dress</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=充电器">Skirt</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Skirt">Skirt</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate= T恤">T-shirt/Shirt</a>
+                                                                href="${pageContext.request.contextPath}/category?cate= T-shirt/Shirt">T-shirt/Shirt</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=卫衣">Sweatshirt</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Sweatshirt">Sweatshirt</a>
                                                         </dd>
                                                     </dl>
                                                     <dl class="dl-hor">
                                                         <dt>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=男装">Men's
+                                                                href="${pageContext.request.contextPath}/category?cate=Men's Wear">Men's
                                                                 Wear</a>
                                                         </dt>
                                                         <dd>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=外套">Coat</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Coat">Coat</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=衬衫">Shirt</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Shirt">Shirt</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=夹克">Jacket</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Jacket">Jacket</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=运动外套">Sports
+                                                                href="${pageContext.request.contextPath}/category?cate=Sports Jacket">Sports
                                                                 Jacket</a>
                                                         </dd>
                                                     </dl>
                                                     <dl class="dl-hor">
                                                         <dt>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=鞋子">Shoes</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Shoes">Shoes</a>
                                                         </dt>
                                                         <dd>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=运动鞋">Sneakers</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Sneakers">Sneakers</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=单鞋">Single
+                                                                href="${pageContext.request.contextPath}/category?cate=Single Shoes">Single
                                                                 Shoes</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=皮鞋">Leather
+                                                                href="${pageContext.request.contextPath}/category?cate=Leather Shoes">Leather
                                                                 Shoes</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=拖鞋">Slippers</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Slippers">Slippers</a>
                                                         </dd>
                                                     </dl>
                                                     <dl class="dl-hor">
                                                         <dt>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=箱包">Bags</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Bags">Bags</a>
                                                         </dt>
                                                         <dd>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=女包">Women's
+                                                                href="${pageContext.request.contextPath}/category?cate=Women's Bag">Women's
                                                                 Bag</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=男包">Men's
+                                                                href="${pageContext.request.contextPath}/category?cate=Men's Bag">Men's
                                                                 Bag</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=旅行箱">Suitcase</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Suitcase">Suitcase</a>
                                                         </dd>
                                                     </dl>
                                                 </div>
                                             </li>
                                             <li class="list-group-item"><a
-                                                    href="${pageContext.request.contextPath}/category?cate=装饰品">Accessories</a>
+                                                    href="${pageContext.request.contextPath}/category?cate=Accessories">Accessories</a>
                                                 <div class="sort-detail">
                                                     <dl class="dl-hor">
                                                         <dt>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=配饰">Ornaments</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Ornaments">Ornaments</a>
                                                         </dt>
                                                         <dd>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=腰带">Belt</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Belt">Belt</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=皮带">Leather
+                                                                href="${pageContext.request.contextPath}/category?cate=Leather Belt">Leather
                                                                 Belt</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=帽子">Hat</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Hat">Hat</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=围巾">Scarf</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Scarf">Scarf</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=手套">Gloves</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Gloves">Gloves</a>
                                                         </dd>
                                                     </dl>
                                                     <dl class="dl-hor">
                                                         <dt>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=手表">Watch</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Watch">Watch</a>
                                                         </dt>
                                                         <dd>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=机械表">Mechanical
+                                                                href="${pageContext.request.contextPath}/category?cate=Mechanical Watch">Mechanical
                                                                 Watch</a><a
-                                                                href="${pageContext.request.contextPath}/category?cate=石英表">Quartz
+                                                                href="${pageContext.request.contextPath}/category?cate=Quartz Watch">Quartz
                                                                 Watch</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=电子表">Electronic
+                                                                href="${pageContext.request.contextPath}/category?cate=Electronic Watch">Electronic
                                                                 Watch</a>
                                                         </dd>
                                                     </dl>
                                                     <dl class="dl-hor">
                                                         <dt>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=饰品">Jewelry</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Jewelry">Jewelry</a>
                                                         </dt>
                                                         <dd>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=眼镜">Glasses</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Glasses">Glasses</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=手链">Bracelet</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Bracelet">Bracelet</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=项链">Necklace</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Necklace">Necklace</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=吊坠">Pendant</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Pendant">Pendant</a>
                                                         </dd>
                                                     </dl>
                                                     <dl class="dl-hor">
                                                         <dt>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=收藏品">Collectibles</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Collectibles">Collectibles</a>
                                                         </dt>
                                                         <dd>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=古玩">Antiques</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Antiques">Antiques</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=邮票">Stamps</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Stamps">Stamps</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=钱币">Coins</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Coins">Coins</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=陶瓷">Ceramics</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Ceramics">Ceramics</a>
                                                         </dd>
                                                     </dl>
                                                 </div>
                                             </li>
                                             <li class="list-group-item"><a
-                                                    href="${pageContext.request.contextPath}/category?cate=学习用品">Study
+                                                    href="${pageContext.request.contextPath}/category?cate=Study Supplies">Study
                                                     Supplies</a>
                                                 <div class="sort-detail">
                                                     <dl class="dl-hor">
                                                         <dt>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=编码">Coding</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Coding">Coding</a>
                                                         </dt>
                                                         <dd>
                                                             <a
@@ -421,92 +421,92 @@
                                                     <dl class="dl-hor">
                                                         <dt>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=培训">Training</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Training">Training</a>
                                                         </dt>
                                                         <dd>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=驾照">Driver's
+                                                                href="${pageContext.request.contextPath}/category?cate=Driver's License">Driver's
                                                                 License</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=考研">Postgraduate
+                                                                href="${pageContext.request.contextPath}/category?cate=Postgraduate Entrance Exam">Postgraduate
                                                                 Entrance Exam</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=计算机证书">Computer
+                                                                href="${pageContext.request.contextPath}/category?cate=Computer Certificate">Computer
                                                                 Certificate</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=四六级">CET-4/6</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=CET-4/6">CET-4/6</a>
                                                         </dd>
                                                     </dl>
                                                     <dl class="dl-hor">
                                                         <dt>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=线上课程">Online
+                                                                href="${pageContext.request.contextPath}/category?cate=Online Course">Online
                                                                 Course</a>
                                                         </dt>
                                                         <dd>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=健身">Fitness</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Fitness">Fitness</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=考证">Certificate
+                                                                href="${pageContext.request.contextPath}/category?cate=Certificate Exam">Certificate
                                                                 Exam</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=学习">Study</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Study">Study</a>
                                                         </dd>
                                                     </dl>
                                                 </div>
                                             </li>
                                             <li class="list-group-item"><a
-                                                    href="${pageContext.request.contextPath}/category?cate=闲置百货">General
+                                                    href="${pageContext.request.contextPath}/category?cate=General Merchandise">General
                                                     Merchandise</a>
                                                 <div class="sort-detail">
                                                     <dl class="dl-hor">
                                                         <dt>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=日用">Daily
+                                                                href="${pageContext.request.contextPath}/category?cate=Daily Use">Daily
                                                                 Use</a>
                                                         </dt>
                                                         <dd>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=雨伞">Umbrella</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Umbrella">Umbrella</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=口罩">Mask</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Mask">Mask</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=拖布">Mop</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Mop">Mop</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=电风扇">Fan</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Fan">Fan</a>
                                                         </dd>
                                                     </dl>
                                                     <dl class="dl-hor">
                                                         <dt>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=餐具">Tableware</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Tableware">Tableware</a>
                                                         </dt>
                                                         <dd>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=餐盘">Plate</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Plate">Plate</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=保温杯">Thermos
+                                                                href="${pageContext.request.contextPath}/category?cate=Thermos Cup">Thermos
                                                                 Cup</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=饭盒">Lunch
+                                                                href="${pageContext.request.contextPath}/category?cate=Lunch Box">Lunch
                                                                 Box</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=餐具套装">Tableware
+                                                                href="${pageContext.request.contextPath}/category?cate=Tableware Set">Tableware
                                                                 Set</a>
                                                         </dd>
                                                     </dl>
                                                     <dl class="dl-hor">
                                                         <dt>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=出行">Travel</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Travel">Travel</a>
                                                         </dt>
                                                         <dd>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=自行车">Bicycle</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Bicycle">Bicycle</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=电动车">E-bike</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=E-bike">E-bike</a>
                                                             <a
-                                                                href="${pageContext.request.contextPath}/category?cate=滑板">Skateboard</a>
+                                                                href="${pageContext.request.contextPath}/category?cate=Skateboard">Skateboard</a>
                                                         </dd>
                                                     </dl>
                                                 </div>
@@ -584,7 +584,7 @@
                         <c:if test="${!empty digGoods}">
                             <div class="module">
                                 <div class="hd">
-                                    <h2>数码</h2>
+                                    <h2>Digital</h2>
                                     <hr>
                                 </div>
 
@@ -636,7 +636,7 @@
                         <c:if test="${!empty houseGoods}">
                             <div class="module">
                                 <div class="hd">
-                                    <h2>家电</h2>
+                                    <h2>Electronics</h2>
                                     <hr>
                                 </div>
 
@@ -688,7 +688,7 @@
                         <c:if test="${!empty colGoods}">
                             <div class="module">
                                 <div class="hd">
-                                    <h2>服饰</h2>
+                                    <h2>Clothing</h2>
                                     <hr>
                                 </div>
 
@@ -739,7 +739,7 @@
                         <c:if test="${!empty bookGoods}">
                             <div class="module">
                                 <div class="hd">
-                                    <h2>书籍</h2>
+                                    <h2>Books</h2>
                                     <hr>
                                 </div>
 

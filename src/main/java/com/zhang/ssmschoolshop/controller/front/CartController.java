@@ -19,98 +19,97 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-public class CartController {
+public class CartController { 
 
-    @Autowired
-    private ShopCartService shopCartService;
+@Autowired 
+private ShopCartService shopCartService; 
 
-    @Autowired
-    private GoodsService goodsService;
+@Autowired 
+private GoodsService goodsService; 
 
-    @RequestMapping("/addCart")
-    public String addCart(ShopCart shopCart, HttpServletRequest request) {
-        HttpSession session = request.getSession();
-        User user = (User) session.getAttribute("user");
-        if(user == null) {
-            return "redirect:/login";
-        }
-        //判断是否已经加入购物车
-        ShopCart shopCart1 = shopCartService.selectCartByKey(new ShopCartKey(user.getUserid(), shopCart.getGoodsid()));
-        if (shopCart1 != null) {
-            return "redirect:/showcart";
-        }
+@RequestMapping("/addCart") 
+public String addCart(ShopCart shopCart, HttpServletRequest request) { 
+HttpSession session = request.getSession(); 
+User user = (User) session.getAttribute("user"); 
+if(user == null) { 
+return "redirect:/login"; 
+} 
+//Determine whether it has been added to the shopping cart 
+ShopCart shopCart1 = shopCartService.selectCartByKey(new ShopCartKey(user.getUserid(), shopCart.getGoodsid())); 
+if (shopCart1 != null) { 
+return "redirect:/showcart"; 
+} 
 
-        //用户
-        shopCart.setUserid(user.getUserid());
+//user 
+shopCart.setUserid(user.getUserid()); 
 
-        //加入时间
-        shopCart.setCatedate(new Date());
+//Add time 
+shopCart.setCatedate(new Date()); 
 
-        shopCartService.addShopCart(shopCart);
+shopCartService.addShopCart(shopCart); 
 
-        //返回到购物车页面
-        return "redirect:/showcart";
-    }
+//Return to shopping cart page 
+return "redirect:/showcart"; 
+} 
 
-    @RequestMapping("/showcart")
-    public String showCart(HttpSession session) {
-        User user = (User) session.getAttribute("user");
-        if(user == null) {
-            return "redirect:/login";
-        }
-        return "shopcart";
-    }
+@RequestMapping("/showcart") 
+public String showCart(HttpSession session) { 
+User user = (User) session.getAttribute("user"); 
+if(user == null) { 
+return "redirect:/login"; 
+} 
+return "shopcart"; 
+} 
 
-    @RequestMapping("/cartjson")
-    @ResponseBody
-    public Msg getCart(HttpSession session) {
-        User user = (User) session.getAttribute("user");
-        if(user == null) {
-            return Msg.fail("请先登录");
-        }
+@RequestMapping("/cartjson") 
+@ResponseBody 
+public Msg getCart(HttpSession session) { 
+User user = (User) session.getAttribute("user"); if(user == null) {
+return Msg.fail("Please log in first");
+}
 
-        //获取当前用户的购物车信息
-        ShopCartExample shopCartExample = new ShopCartExample();
-        shopCartExample.or().andUseridEqualTo(user.getUserid());
-        List<ShopCart> shopCart = shopCartService.selectByExample(shopCartExample);
+//Get the current user's shopping cart information
+ShopCartExample shopCartExample = new ShopCartExample();
+shopCartExample.or().andUseridEqualTo(user.getUserid());
+List<ShopCart> shopCart = shopCartService.selectByExample(shopCartExample);
 
-        //获取购物车中的商品信息
-        List<Goods> goodsAndImage = new ArrayList<>();
-        for (ShopCart cart:shopCart) {
-            Goods goods = goodsService.selectById(cart.getGoodsid());
-            List<ImagePath> imagePathList = goodsService.findImagePath(goods.getGoodsid());
-            goods.setImagePaths(imagePathList);
-            goods.setNum(cart.getGoodsnum());
-            goodsAndImage.add(goods);
-        }
+//Get the product information in the shopping cart
+List<Goods> goodsAndImage = new ArrayList<>();
+for (ShopCart cart:shopCart) {
+Goods goods = goodsService.selectById(cart.getGoodsid());
+List<ImagePath> imagePathList = goodsService.findImagePath(goods.getGoodsid());
+goods.setImagePaths(imagePathList);
+goods.setNum(cart.getGoodsnum());
+goodsAndImage.add(goods);
+}
 
-        return Msg.success("查询成功").add("shopcart",goodsAndImage);
-    }
+return Msg.success("Query successful").add("shopcart",goodsAndImage); 
+} 
 
-    @RequestMapping(value = "/deleteCart/{goodsid}", method = RequestMethod.DELETE)
-    @ResponseBody
-    public Msg deleteCart(@PathVariable("goodsid")Integer goodsid, HttpSession session) {
-        User user = (User) session.getAttribute("user");
-        if(user == null) {
-            return Msg.fail("请先登录");
-        }
+@RequestMapping(value = "/deleteCart/{goodsid}", method = RequestMethod.DELETE) 
+@ResponseBody 
+public Msg deleteCart(@PathVariable("goodsid")Integer goodsid, HttpSession session) { 
+User user = (User) session.getAttribute("user"); 
+if(user == null) { 
+return Msg.fail("Please log in first"); 
+} 
 
-        shopCartService.deleteByKey(new ShopCartKey(user.getUserid(), goodsid));
-        return Msg.success("删除成功");
-    }
+shopCartService.deleteByKey(new ShopCartKey(user.getUserid(), goodsid)); 
+return Msg.success("Deletion successful"); 
+} 
 
-    @RequestMapping("/update")
-    @ResponseBody
-    public Msg updateCart(Integer goodsid,Integer num,HttpSession session) {
-        User user = (User) session.getAttribute("user");
-        if(user == null) {
-            return Msg.fail("请先登录");
-        }
-        ShopCart shopCart = new ShopCart();
-        shopCart.setUserid(user.getUserid());
-        shopCart.setGoodsid(goodsid);
-        shopCart.setGoodsnum(num);
-        shopCartService.updateCartByKey(shopCart);
-        return Msg.success("更新购物车成功");
-    }
+@RequestMapping("/update") 
+@ResponseBody 
+public Msg updateCart(Integer goodsid,Integer num,HttpSession session) { 
+User user = (User) session.getAttribute("user");
+if(user == null) {
+return Msg.fail("Please log in first");
+}
+ShopCart shopCart = new ShopCart();
+shopCart.setUserid(user.getUserid());
+shopCart.setGoodsid(goodsid);
+shopCart.setGoodsnum(num);
+shopCartService.updateCartByKey(shopCart);
+return Msg.success("Shopping cart updated successfully");
+}
 }

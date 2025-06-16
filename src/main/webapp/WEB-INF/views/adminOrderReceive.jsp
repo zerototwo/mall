@@ -1,4 +1,4 @@
-<%-- Created by IntelliJ IDEA. User: zhangxin Date: 2019/5/13 Time: 15:45 --%>
+
     <%@ page contentType="text/html;charset=UTF-8" language="java" %>
         <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
             <!DOCTYPE html>
@@ -8,7 +8,7 @@
                 <meta charset="utf-8">
                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
                 <meta name="viewport" content="width=device-width, initial-scale=1">
-                <title>后台管理</title>
+                <title></title>
                 <meta name="description" content="">
                 <meta name="author" content="templatemo">
                 <!--

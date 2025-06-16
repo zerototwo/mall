@@ -1,87 +1,87 @@
 package com.zhang.ssmschoolshop.entity;
 
-/**
- * 促销活动
- */
-public class Activity {
+/** 
+* Promotional activities 
+*/
+public class Activity { 
 
-    private Integer activityid;   //活动id
+private Integer activityid; //activity id 
 
-    private String activityname;  //活动名
+private String activityname; //activity name 
 
-    private String activitydes;  //活动地址
+private String activitydes; //Activity address 
 
-    private Float discount;       //满减
+private Float discount; // full discount 
 
-    private Integer fullprice;
+private Integer fullprice; 
 
-    private Integer reduceprice;
+private Integer reduceprice; 
 
-    private Integer fullnum;
+private Integer fullnum; 
 
-    private Integer reducenum;
+private Integer reducenum; 
 
-    public Integer getActivityid() {
-        return activityid;
-    }
+public Integer getActivityid() { 
+return activityid; 
+} 
 
-    public void setActivityid(Integer activityid) {
-        this.activityid = activityid;
-    }
+public void setActivityid(Integer activityid) { 
+this.activityid = activityid; 
+} 
 
-    public String getActivityname() {
-        return activityname;
-    }
+public String getActivityname() { 
+return activityname; 
+} 
 
-    public void setActivityname(String activityname) {
-        this.activityname = activityname == null ? null : activityname.trim();
-    }
+public void setActivityname(String activityname) { 
+this.activityname = activityname == null ? null : activityname.trim(); 
+} 
 
-    public String getActivitydes() {
-        return activitydes;
-    }
+public String getActivitydes() { 
+return activitydes; 
+} 
 
-    public void setActivitydes(String activitydes) {
-        this.activitydes = activitydes == null ? null : activitydes.trim();
-    }
+public void setActivitydes(String activitydes) { 
+this.activitydes = activitydes == null ? null : activitydes.trim(); 
+} 
 
-    public Float getDiscount() {
-        return discount;
-    }
+public Float getDiscount() { 
+return discount; 
+} 
 
-    public void setDiscount(Float discount) {
-        this.discount = discount;
-    }
+public void setDiscount(Float discount) { 
+this.discount = discount; 
+} 
 
-    public Integer getFullprice() {
-        return fullprice;
-    }
+public Integer getFullprice() { 
+return fullprice; 
+} 
 
-    public void setFullprice(Integer fullprice) {
-        this.fullprice = fullprice;
-    }
+public void setFullprice(Integer fullprice) { 
+this.fullprice = fullprice; 
+} 
 
-    public Integer getReduceprice() {
-        return reduceprice;
-    }
+public Integer getReduceprice() { 
+return reduceprice; 
+} 
 
-    public void setReduceprice(Integer reduceprice) {
-        this.reduceprice = reduceprice;
-    }
+public void setReduceprice(Integer reduceprice) { 
+this.reduceprice = reduceprice; 
+} 
 
-    public Integer getFullnum() {
-        return fullnum;
-    }
+public Integer getFullnum() { 
+return fullnum; 
+} 
 
-    public void setFullnum(Integer fullnum) {
-        this.fullnum = fullnum;
-    }
+public void setFullnum(Integer fullnum) { 
+this.fullnum = fullnum; 
+} 
 
-    public Integer getReducenum() {
-        return reducenum;
-    }
+publicInteger getReducenum() { 
+return reducenum; 
+} 
 
-    public void setReducenum(Integer reducenum) {
-        this.reducenum = reducenum;
-    }
+public void setReducenum(Integer reducenum) { 
+this.reducenum = reducenum; 
+}
 }

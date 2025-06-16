@@ -39,19 +39,19 @@ public class GoodsController {
     public Msg getAllGoods(@RequestParam(value = "page", defaultValue = "1") Integer pn, HttpServletResponse response, Model model, HttpSession session) {
         Admin admin = (Admin) session.getAttribute("admin");
         if (admin == null) {
-            return Msg.fail("请先登录");
+            return Msg.fail("login");
         }
-        //一页显示几个数据
+
         PageHelper.startPage(pn, 10);
 
         List<Goods> employees = goodsService.selectByExample(new GoodsExample());
 
-        //显示几个页号
+
         PageInfo page = new PageInfo(employees, 5);
 
         model.addAttribute("pageInfo", page);
 
-        return Msg.success("查询成功!").add("pageInfo", page);
+        return Msg.success("success").add("pageInfo", page);
     }
 
     @RequestMapping("/show")
@@ -82,7 +82,7 @@ public class GoodsController {
         model.addAttribute("categoryList", categoryList);
 
 
-        //还需要查询分类传给addGoods页面
+
         return "addGoods";
     }
 
@@ -91,18 +91,18 @@ public class GoodsController {
     public Msg updateGoods(Goods goods, HttpSession session) {
         Admin admin = (Admin) session.getAttribute("admin");
         if (admin == null) {
-            return Msg.fail("请先登录");
+            return Msg.fail("login");
         }
         /* goods.setGoodsid(goodsid);*/
         goodsService.updateGoodsById(goods);
-        return Msg.success("更新成功!");
+        return Msg.success("success");
     }
 
     @RequestMapping(value = "/delete/{goodsid}", method = RequestMethod.DELETE)
     @ResponseBody
     public Msg deleteGoods(@PathVariable("goodsid") Integer goodsid) {
         goodsService.deleteGoodsById(goodsid);
-        return Msg.success("删除成功!");
+        return Msg.success("success");
     }
 
     @RequestMapping("/addGoodsSuccess")
@@ -119,14 +119,14 @@ public class GoodsController {
             String fileName = goods.getGoodsname()+ multipartFile.getOriginalFilename();
             if (multipartFile != null) {
                String ImagePath= ImageUtil.imagePath(multipartFile,fileName);
-               System.out.println("最后存入数据的图片名字为:"+ImagePath);
-                //把图片路径存入数据库中
+               System.out.println("img is"+ImagePath);
+ 
               goodsService.addImagePath(new ImagePath(null, goods.getGoodsid(), ImagePath));
 
             }
         }
 
-        redirectAttributes.addFlashAttribute("succeseMsg", "商品添加成功!");
+        redirectAttributes.addFlashAttribute("succeseMsg", "success");
 
         return "redirect:/admin/goods/add";
     }
@@ -158,11 +158,11 @@ public class GoodsController {
         categoryExample.or().andCatenameEqualTo(category.getCatename());
         categoryList = cateService.selectByExample(categoryExample);
         if (!categoryList.isEmpty()) {
-            redirectAttributes.addAttribute("succeseMsg", "分类已存在");
+            redirectAttributes.addAttribute("succeseMsg", "already exists");
             return "redirect:/admin/goods/addCategory";
         } else {
             cateService.insertSelective(category);
-            redirectAttributes.addFlashAttribute("succeseMsg", "分类添加成功!");
+            redirectAttributes.addFlashAttribute("succeseMsg", "success");
             return "redirect:/admin/goods/addCategory";
         }
     }
@@ -175,14 +175,14 @@ public class GoodsController {
         List<Category> categoryList = cateService.selectByExample(categoryExample);
         if (categoryList.isEmpty()) {
             cateService.updateByPrimaryKeySelective(category);
-            return Msg.success("更新成功");
-        } else return Msg.success("名字已经存在");
+            return Msg.success("success");
+        } else return Msg.success("already exists");
     }
 
     @RequestMapping("/deleteCate")
     @ResponseBody
     public Msg deleteCate(Category category) {
         cateService.deleteByPrimaryKey(category.getCateid());
-        return Msg.success("删除成功");
+        return Msg.success("success");
     }
 }

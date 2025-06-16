@@ -2,152 +2,123 @@ package com.zhang.ssmschoolshop.controller.front;
 
 
 import com.zhang.ssmschoolshop.entity.*;
-import com.zhang.ssmschoolshop.service.*;
-import com.zhang.ssmschoolshop.util.Msg;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import com.zhang.ssmschoolshop.service.CateService;
+import com.zhang.ssmschoolshop.service.GoodsService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mail.MailException;
-import org.springframework.mail.SimpleMailMessage;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
-import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
-
 @Controller
-public class OrderController {
+public class MainController { 
 
-    private static final Logger log = LoggerFactory.getLogger(OrderController.class);
+@Autowired 
+private CateService cateService; 
 
-    /*@Value("#{addressService}")*/
-    @Autowired
-    private AddressService addressService;
+@Autowired 
+private GoodsService goodsService; 
 
-    @Autowired
-    private ShopCartService shopCartService;
 
-    @Autowired
-    private GoodsService goodsService;
+@RequestMapping("/") 
+public String showAdmin(Model model, HttpSession session) { 
+Integer userid; 
+User user = (User) session.getAttribute("user"); 
+if (user == null) { 
+userid = null; 
+} else { 
+userid = user.getUserid(); 
+} 
 
-    @Autowired
-    private OrderService orderService;
+//Digital classification 
+List<Goods> digGoods = getCateGoods("digital", userid); 
+model.addAttribute("digGoods", digGoods); 
 
-    @Autowired
-    private ActivityService activityService;
+//Home appliances 
+List<Goods> houseGoods = getCateGoods("Home Appliances", userid); 
+model.addAttribute("houseGoods", houseGoods); 
 
-    @Autowired
-    private EmailService emailService;
+//apparel 
+List<Goods> colGoods = getCateGoods("Clothes", userid); 
+model.addAttribute("colGoods", colGoods); 
 
-    @RequestMapping("/order")
-    public String showOrder(HttpSession session, Model model) {
+//books 
+List<Goods> bookGoods = getCateGoods("Books", userid); 
+model.addAttribute("bookGoods", bookGoods); 
 
-        User user = (User) session.getAttribute("user");
-        if (user == null) {
-            return "redirect:/login";
-        }
+return "main"; 
+} 
 
-        //查询当前用户的收货地址
-        AddressExample addressExample = new AddressExample();
-        addressExample.or().andUseridEqualTo(user.getUserid());
-        List<Address> addressList = addressService.getAllAddressByExample(addressExample);
 
-        model.addAttribute("address", addressList);
 
-        //订单信息
-        //获取当前用户的购物车信息
-        ShopCartExample shopCartExample = new ShopCartExample();
-        shopCartExample.or().andUseridEqualTo(user.getUserid());
-        List<ShopCart> shopCart = shopCartService.selectByExample(shopCartExample);
 
-        //获取购物车中的商品信息
-        List<Goods> goodsAndImage = new ArrayList<>();
+@RequestMapping("/main") 
+public String showAllGoods(Model model, HttpSession session) { 
+Integer userid; 
+User user = (User) session.getAttribute("user"); 
+if (user == null) { 
+userid = null; 
+} else { 
+userid = user.getUserid(); 
+} 
+//Digital classification 
+List<Goods> digGoods = getCateGoods("digital", userid); 
+model.addAttribute("digGoods", digGoods); 
+//Home appliances 
+List<Goods> houseGoods = getCateGoods("Home Appliances", userid); 
+model.addAttribute("houseGoods", houseGoods); 
+//apparel 
+List<Goods> colGoods = getCateGoods("Clothes", userid); 
+model.addAttribute("colGoods", colGoods); 
+//books 
+List<Goods> bookGoods = getCateGoods("Books", userid);
+model.addAttribute("bookGoods", bookGoods);
 
-        Float totalPrice = new Float(0);
-        Integer oldTotalPrice = 0;
+return "main";
+}
 
-        for (ShopCart cart : shopCart) {
-            //分别从购物车列表中获取每个商品
-            Goods goods = goodsService.selectById(cart.getGoodsid());
+public List<Goods> getCateGoods(String cate, Integer userid) {
+//Query category
+CategoryExample digCategoryExample = new CategoryExample();
+digCategoryExample.or().andCatenameLike(cate);
+List<Category> digCategoryList = cateService.selectByExample(digCategoryExample);
 
-            List<ImagePath> imagePathList = goodsService.findImagePath(goods.getGoodsid());
-            goods.setImagePaths(imagePathList);
-            goods.setNum(cart.getGoodsnum());
+if (digCategoryList.size() == 0) {
+return null;
+}
 
-            //活动信息
-            Activity activity = activityService.selectByKey(goods.getActivityid());
-            goods.setActivity(activity);
+//Query the products belonging to the category just found
+GoodsExample digGoodsExample = new GoodsExample();
+List<Integer> digCateId = new ArrayList<Integer>();
+for (Category tmp:digCategoryList) {
+digCateId.add(tmp.getCateid());
+}
+digGoodsExample.or().andCategoryIn(digCateId);
 
-            //处理折扣信息
-            //如果商品折扣不为1
-            if (activity.getDiscount() != 1) {
-                goods.setNewPrice(goods.getPrice() * goods.getNum() * activity.getDiscount());
-                System.out.println("价格为：" + goods.getPrice() * goods.getNum() * activity.getDiscount());
-            } else if (activity.getFullnum() != null) {
-                System.out.println("进入第二层方法");
-                if (goods.getNum() >= activity.getFullnum()) {
-                    goods.setNewPrice((float) (goods.getPrice() * (goods.getNum() - activity.getReducenum())));
-                } else {
-                    goods.setNewPrice((float) (goods.getPrice() * goods.getNum()));
-                }
-            } else if (activity.getFullprice() != null && activity.getReducenum() != null) {
-                if ((goods.getNum() * goods.getNum()) > activity.getFullprice()) {
-                    goods.setNewPrice((float) (goods.getPrice() * goods.getNum() - activity.getReducenum()));
-                } else {
-                    goods.setNewPrice((float) (goods.getPrice() * goods.getNum()));
+List<Goods> goodsList = goodsService.selectByExampleLimit(digGoodsExample);
 
-                }
+List<Goods> goodsAndImage = new ArrayList<>();
+//Get the image of each product
+for (Goods goods:goodsList) {
+//Judge whether it is logged in
+if (userid == null) {
+goods.setFav(false);
+} else {
+Favorite favorite = goodsService.selectFavByKey(new FavoriteKey(userid, goods.getGoodsid()));
+if (favorite == null) {
+goods.setFav(false);
+} else {
+goods.setFav(true);
+}
+}
 
-            } else {
-                goods.setNewPrice((float) (goods.getPrice() * goods.getNum()));
-            }
-            totalPrice = totalPrice + goods.getNewPrice();
-            oldTotalPrice = oldTotalPrice + goods.getNum() * goods.getPrice();
-            goodsAndImage.add(goods);
-        }
-
-        model.addAttribute("totalPrice", totalPrice);
-        model.addAttribute("oldTotalPrice", oldTotalPrice);
-        model.addAttribute("goodsAndImage", goodsAndImage);
-
-        return "orderConfirm";
-    }
-
-    @RequestMapping("/orderFinish")
-    @ResponseBody
-    public Msg orderFinish(Float oldPrice, Float newPrice, Boolean isPay, Integer addressid, HttpSession session) {
-
-        User user = (User) session.getAttribute("user");
-
-        //获取订单信息
-        ShopCartExample shopCartExample = new ShopCartExample();
-        shopCartExample.or().andUseridEqualTo(user.getUserid());
-        List<ShopCart> shopCart = shopCartService.selectByExample(shopCartExample);
-
-        //删除购物车
-        for (ShopCart cart : shopCart) {
-            shopCartService.deleteByKey(new ShopCartKey(cart.getUserid(), cart.getGoodsid()));
-        }
-
-        //把订单信息写入数据库
-        Order order = new Order(null, user.getUserid(), new Date(), oldPrice, newPrice, isPay, false, false, false, addressid, null, null);
-        orderService.insertOrder(order);
-        //插入的订单号
-        Integer orderId = order.getOrderid();
-
-        //把订单项写入orderitem表中
-        for (ShopCart cart : shopCart) {
-            orderService.insertOrderItem(new OrderItem(null, orderId, cart.getGoodsid(), cart.getGoodsnum()));
-        }
-        // 购买成功通知管理员
-       // emailService.sendEmailToAdmin();
-        return Msg.success("购买成功");
-    }
-
+List<ImagePath> imagePathList = goodsService.findImagePath(goods.getGoodsid()); 
+goods.setImagePaths(imagePathList); 
+goodsAndImage.add(goods); 
+} 
+return goodsAndImage; 
+}
 }

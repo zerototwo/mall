@@ -26,8 +26,8 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("毕设商城系统API")
-                .contact(new Contact("zhangxin", "http://www.github.com/codingzhangxin", "994683607@qq.com"))
+                .title("API")
+                .contact(new Contact("1476475770@qq.com"))
                 .version("1.0")
                 .build();
     }

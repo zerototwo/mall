@@ -23,7 +23,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/admin/activity")
-@Api(value="促销活动controller",tags={"促销活动操作接口"})
+@Api(value="actvcontroller",tags={"activity"})
 public class ActivityController {
 
     @Autowired(required = false)
@@ -40,7 +40,6 @@ public class ActivityController {
             return "redirect:/admin/login";
         }
 
-        //一页显示几个数据
         PageHelper.startPage(pn, 10);
 
         ActivityExample activityExample = new ActivityExample();
@@ -48,7 +47,6 @@ public class ActivityController {
 
         List<Activity> activityList = activityService.getAllActivity(activityExample);
 
-        //显示几个页号
         PageInfo page = new PageInfo(activityList,5);
         model.addAttribute("pageInfo", page);
 
@@ -61,7 +59,7 @@ public class ActivityController {
 
         Admin admin = (Admin) session.getAttribute("admin");
         if (admin == null) {
-            return Msg.fail("请先登录");
+            return Msg.fail("login please);
         }
 
         ActivityExample activityExample = new ActivityExample();
@@ -69,7 +67,7 @@ public class ActivityController {
 
         List<Activity> activityList = activityService.getAllActivity(activityExample);
 
-        return Msg.success("获取活动信息成功").add("activity",activityList);
+        return Msg.success("success").add("activity",activityList);
     }
 
     @RequestMapping("/add")
@@ -94,13 +92,13 @@ public class ActivityController {
     public Msg updateActivity(Integer goodsid, Integer activityid, HttpSession session) {
         Admin admin = (Admin) session.getAttribute("admin");
         if (admin == null) {
-            return Msg.fail("请先登录");
+            return Msg.fail("login please");
         }
         Goods goods = new Goods();
         goods.setActivityid(activityid);
         goods.setGoodsid(goodsid);
         goodsService.updateGoodsById(goods);
-        return Msg.success("更新商品活动成功");
+        return Msg.success("success");
     }
 
     @RequestMapping("delete")

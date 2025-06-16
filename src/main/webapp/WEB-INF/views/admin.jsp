@@ -9,10 +9,7 @@
         <title>Admin Management</title>
         <meta name="description" content="">
         <meta name="author" content="templatemo">
-        <!--
-    Visual Admin Template
-    http://www.templatemo.com/preview/templatemo_455_visual_admin
-    -->
+
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700' rel='stylesheet'
             type='text/css'>
         <link href="${pageContext.request.contextPath}/css/font-awesome.min.css" rel="stylesheet">
@@ -199,8 +196,7 @@
                     </div>
                     <footer class="text-right">
                         <div class="button">xxx</div>
-                        <p>Copyright &copy; 2019 Company Name
-                            | Designed by <a href="http://www.templatemo.com" target="_parent">Zhang Xin</a></p>
+                       
                     </footer>
                 </div>
             </div>

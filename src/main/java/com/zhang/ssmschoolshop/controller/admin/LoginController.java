@@ -29,7 +29,7 @@ public class LoginController {
         admin.setPassword(Md5Util.MD5Encode(admin.getPassword(),"utf-8"));
         Admin selectAdmin = adminService.selectByName(admin);
         if (selectAdmin == null) {
-            model.addAttribute("errorMsg", "用户名或密码错误");
+            model.addAttribute("errorMsg", "error");
             return "adminLogin";
         } else {
             HttpSession session = request.getSession();
